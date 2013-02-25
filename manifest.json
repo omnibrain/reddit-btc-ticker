@@ -1,0 +1,13 @@
+{
+  "name": "Reddit BTC Ticker",
+  "manifest_version": 2,
+  "version": "1.1",
+  "description": "Add a bitcoin price ticker to the bitcoin subreddit",
+  "permissions": ["http://www.reddit.com/r/Bitcoin*", "https://mtgox.com/api/1/BTCUSD/ticker"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/r/Bitcoin*"],
+      "js": ["jquery-1.9.1.min.js", "btc-ticker.js"]
+    }
+  ]
+}
